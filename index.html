@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Букмекерская контора</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Букмекерская контора</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="registration.html" id="registrationLink">Регистрация</a></li>
+                    <li><a href="login.html" id="loginLink">Вход</a></li>
+                    <li><a href="account.html" id="accountLink" style="display:none;">Аккаунт</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="balance">
+            <p>Ваш баланс: <span id="balance">1000</span> руб.</p>
+        </div>
+        <div class="events">
+            <h2>Текущие события</h2>
+            <ul id="eventsList">
+                <!-- Здесь будут отображаться события -->
+            </ul>
+        </div>
+        <div class="buttons">
+            <button id="refreshEventsButton">Обновить события</button>
+            <button id="betButton">Сделать ставку</button>
+            <button id="addFundsButton">Пополнить баланс</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
