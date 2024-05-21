@@ -1,17 +1,18 @@
-// Заполняем информацию об аккаунте
-var usernameElement = document.getElementById("username");
-var storedUsername = localStorage.getItem("username");
-if (storedUsername) {
-    usernameElement.textContent = storedUsername;
-} else {
-    usernameElement.textContent = "Гость";
-}
+window.addEventListener('load', function() {
+    var username = localStorage.getItem('username');
+    var loggedIn = localStorage.getItem('loggedIn');
 
-// Обработка выхода из аккаунта
-document.getElementById("logoutButton").addEventListener("click", function() {
-    // Очищаем данные пользователя в localStorage
-    localStorage.removeItem("username");
-    localStorage.removeItem("password");
-    // Перенаправляем пользователя на страницу входа
-    window.location.href = "login.html";
+    if (username && loggedIn === 'true') {
+        document.getElementById('usernameDisplay').innerText = username;
+    } else {
+        // Перенаправляем пользователя на страницу входа, если он не авторизован
+        window.location.href = 'login.html';
+    }
+
+    document.getElementById('logoutButton').addEventListener('click', function() {
+        // Удаляем статус входа
+        localStorage.setItem('loggedIn', 'false');
+        // Перенаправляем пользователя на главную страницу
+        window.location.href = 'index.html';
+    });
 });

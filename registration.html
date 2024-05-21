@@ -3,24 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Регистрация аккаунта</title>
+    <title>Регистрация</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="registration.html">Регистрация</a></li>
+                    <li><a href="login.html">Вход</a></li>
+                    <li><a href="account.html" id="accountLink" style="display:none;">Аккаунт</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <div class="container">
-        <h1>Регистрация аккаунта</h1>
-        <form id="fullRegistrationForm">
-            <label for="fullName">Полное имя:</label><br>
-            <input type="text" id="fullName" name="fullName" required><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br>
-            <label for="username">Имя пользователя:</label><br>
-            <input type="text" id="username" name="username" required><br>
-            <label for="password">Пароль:</label><br>
-            <input type="password" id="password" name="password" required><br><br>
+        <h2>Регистрация</h2>
+        <form id="registrationForm">
+            <div>
+                <label for="regUsername">Имя пользователя:</label>
+                <input type="text" id="regUsername" name="regUsername" required>
+            </div>
+            <div>
+                <label for="regPassword">Пароль:</label>
+                <input type="password" id="regPassword" name="regPassword" required>
+            </div>
             <button type="submit">Зарегистрироваться</button>
         </form>
-        <p>Уже зарегистрированы? <a href="login.html">Войти</a></p>
     </div>
 
     <script src="registration.js"></script>

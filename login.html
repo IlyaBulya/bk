@@ -3,20 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Вход в систему</title>
+    <title>Вход</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="registration.html">Регистрация</a></li>
+                    <li><a href="login.html">Вход</a></li>
+                    <li><a href="account.html" id="accountLink" style="display:none;">Аккаунт</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <div class="container">
-        <h1>Вход в систему</h1>
+        <h2>Вход</h2>
         <form id="loginForm">
-            <label for="username">Имя пользователя:</label><br>
-            <input type="text" id="username" name="username" required><br>
-            <label for="password">Пароль:</label><br>
-            <input type="password" id="password" name="password" required><br><br>
+            <div>
+                <label for="username">Имя пользователя:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div>
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
             <button type="submit">Войти</button>
         </form>
-        <p>Еще не зарегистрированы? <a href="registration.html">Зарегистрируйтесь</a></p>
     </div>
 
     <script src="login.js"></script>
