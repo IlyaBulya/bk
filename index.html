@@ -17,42 +17,49 @@
                     <li><a href="account.html" id="accountLink" style="display:none;">Аккаунт</a></li>
                 </ul>
             </nav>
+            
+            <div class="buttons">
+                <button id="addFundsButton" style="display:none;">Пополнить баланс</button>
+            </div>
+            <div class="balance">
+                <p>Баланс: <span id="balance">0</span> руб.</p>
+            </div>
         </div>
     </header>
 
     <div class="container">
-        <div class="balance">
-            <p>Баланс: <span id="balance">0</span> руб.</p>
-        </div>
-        <div class="buttons">
-            <button id="addFundsButton" style="display:none;">Пополнить баланс</button>
-        </div>
         <div class="events">
             <h2>Ставки на игроков</h2>
             <div class="positions">
-                <div class="position" data-position="leftForward">
-                    <img src="question.jpg" alt="?" class="placeholder">
-                    <p>Левый нападающий</p>
+                <div class="forwards">
+                    <div class="position" data-position="leftForward">
+                        <img src="img/secret.png" alt="?" class="placeholder">
+                        <p>Левый нападающий</p>
+                    </div>
+                    <div class="position" data-position="centerForward">
+                        <img src="img/secret.png" alt="?" class="placeholder">
+                        <p>Центральный нападающий</p>
+                    </div>
+                    <div class="position" data-position="rightForward">
+                        <img src="img/secret.png" alt="?" class="placeholder">
+                        <p>Правый нападающий</p>
+                    </div>
                 </div>
-                <div class="position" data-position="centerForward">
-                    <img src="question.jpg" alt="?" class="placeholder">
-                    <p>Центральный нападающий</p>
+                <div class="defenders">
+                    <div class="position" data-position="leftDefense">
+                        <img src="img/secret.png" alt="?" class="placeholder">
+                        <p>Левый защитник</p>
+                    </div>
+                    <div class="position" data-position="rightDefense">
+                        <img src="img/secret.png" alt="?" class="placeholder">
+                        <p>Правый защитник</p>
+                    </div>
                 </div>
-                <div class="position" data-position="rightForward">
-                    <img src="question.jpg" alt="?" class="placeholder">
-                    <p>Правый нападающий</p>
-                </div>
-                <div class="position" data-position="leftDefense">
-                    <img src="question.jpg" alt="?" class="placeholder">
-                    <p>Левый защитник</p>
-                </div>
-                <div class="position" data-position="rightDefense">
-                    <img src="question.jpg" alt="?" class="placeholder">
-                    <p>Правый защитник</p>
-                </div>
-                <div class="position" data-position="goalie">
-                    <img src="question.jpg" alt="?" class="placeholder">
-                    <p>Вратарь</p>
+                <div class="goalies">
+                    <div class="position" data-position="goalie">
+                        <img src="img/secret.png" alt="?" class="placeholder">
+                        <p>Вратарь</p>
+                    </div>
                 </div>
             </div>
         </div>

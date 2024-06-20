@@ -5,15 +5,7 @@ function showAddFundsButton() {
 
     // Обработка нажатия на кнопку "Пополнить баланс"
     addFundsButton.addEventListener("click", function() {
-        var funds = prompt("Введите сумму для пополнения:");
-        funds = parseInt(funds);
-        if (!isNaN(funds) && funds > 0) {
-            var balance = parseInt(document.getElementById("balance").innerText);
-            document.getElementById("balance").innerText = balance + funds;
-            alert("Баланс успешно пополнен на " + funds + " руб.");
-        } else {
-            alert("Некорректная сумма для пополнения.");
-        }
+        window.location.href = 'topup.html'; // Перебрасываем на страницу пополнения
     });
 }
 
@@ -21,6 +13,8 @@ function showAddFundsButton() {
 window.addEventListener("load", function() {
     var storedUsername = localStorage.getItem("username");
     var loggedIn = localStorage.getItem("loggedIn");
+    var balance = parseInt(localStorage.getItem("balance")) || 0;
+    document.getElementById("balance").textContent = balance;
 
     if (storedUsername && loggedIn === "true") {
         showAddFundsButton();
@@ -72,28 +66,34 @@ function getPlayersByPosition(position) {
     // This should be replaced with actual data retrieval
     var allPlayers = {
         leftForward: [
-            { name: 'Игрок 1', image: 'player1.jpg' },
-            { name: 'Игрок 2', image: 'player2.jpg' }
+            { name: 'Ovechkin', image: 'img/NHL/LW/ovi.png' },
+            { name: 'Panarin', image: 'img/NHL/LW/panarin.png' },
+            { name: 'Filipov', image: 'img/MHL/LW/Filipov.png' },
         ],
         centerForward: [
-            { name: 'Игрок 3', image: 'player3.jpg' },
-            { name: 'Игрок 4', image: 'player4.jpg' }
+            { name: 'Crosbi', image: 'img/NHL/C/crosbi.png' },
+            { name: 'McDavid', image: 'img/NHL/C/mcdavid.png' },
         ],
         rightForward: [
-            { name: 'Игрок 5', image: 'player5.jpg' },
-            { name: 'Игрок 6', image: 'player6.jpg' }
+            { name: 'Kucherov', image: 'img/NHL/RW/kucherov.png' },
+            { name: 'Pastarnak', image: 'img/NHL/RW/pastarnak.png' },
+            { name: 'Kolesnikov', image: 'img/MHL/RW/Kolesnikov.png' },
         ],
         leftDefense: [
-            { name: 'Игрок 7', image: 'player7.jpg' },
-            { name: 'Игрок 8', image: 'player8.jpg' }
+            { name: 'Hedman', image: 'img/NHL/D/hedman.png' },
+            { name: 'Makar', image: 'img/NHL/D/Makar.png' },
+            { name: 'Nikitin', image: 'img/NHL/D/Nikitin.png' },
+            { name: 'Tsulygin', image: 'img/KHL/D/tsulygin.png' },
         ],
         rightDefense: [
-            { name: 'Игрок 9', image: 'player9.jpg' },
-            { name: 'Игрок 10', image: 'player10.jpg' }
+            { name: 'Hedman', image: 'img/NHL/D/hedman.png' },
+            { name: 'Makar', image: 'img/NHL/D/Makar.png' },
+            { name: 'Nikitin', image: 'img/NHL/D/Nikitin.png' },
+            { name: 'Tsulygin', image: 'img/KHL/D/tsulygin.png' },
         ],
         goalie: [
-            { name: 'Игрок 11', image: 'player11.jpg' },
-            { name: 'Игрок 12', image: 'player12.jpg' }
+            { name: 'Bobrovskiy', image: 'img/NHL/G/bobrovski.png' },
+            { name: 'Vasilevskiy', image: 'img/NHL/G/vasilevskiy.png' },
         ]
     };
 

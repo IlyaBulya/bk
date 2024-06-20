@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пополнение баланса</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="registration.html">Регистрация</a></li>
+                    <li><a href="login.html">Вход</a></li>
+                    <li><a href="account.html">Аккаунт</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Пополнение баланса</h2>
+        <form id="topupForm">
+            <label for="amount">Введите сумму:</label>
+            <input type="number" id="amount" name="amount" required>
+            <button type="submit">Пополнить</button>
+        </form>
+    </div>
+
+    <script src="topup.js"></script>
+</body>
+</html>
